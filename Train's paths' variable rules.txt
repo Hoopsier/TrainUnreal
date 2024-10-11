@@ -1,0 +1,52 @@
+(En)
+Guide to the train's paths' required scene variables:
+
+The lines marked with "-" are found under Components in scene view of the object instance.
+
+PathSpline:
+ - First Path: The first path used by the train. 
+ Since the train starts active, you should not show it spawning, since it closes its doors first.( easy fix but not necessary. )
+
+ - Train needs: to be set for this. Only one train can be set to one track as of now.
+
+ - Next Spline: means the next PathSpline, 
+this will most likely be used for returning to the first player used Path. (leave as none most of the time)
+
+ - Next Split: is the rail switcher that comes after this path. 
+This one is set as none when Next Spline is on. 
+Remember that spline point's end touches the next one's starting point.
+
+SplitPath:
+ - Switch: True; goes along the "split" spline, False; goes along the "spline" spline.
+ - First Path: The first path used by the train. 
+ Since the train starts active, you should not show it spawning, since it closes its doors first.( easy fix but not necessary. )
+ - Train: needs to be set for this. Only one train can be set to one track as of now.
+ - Next Spline: means the next PathSpline of the "spline" spline. 
+ - Next Split: is the rail switcher that comes after this path for the "spline" spline. 
+ - Split's Spline/Split: same as the 2 above, however for the "split" spline.
+
+(Fi)
+Opas junan ratojen vaadituista kohtausmuuttujista:
+
+Rivit, jotka on merkitty "-", löytyvät kohtauksenäkymän Komponentit/Components-välilehdeltä objektin instanssissa.
+
+PathSpline:
+
+ -  First Path: Junan ensimmäinen käyttämä reitti. 
+ Koska juna alkaa aktiivisena, sitä ei tarvitse näyttää syntyvän, 
+ sillä se sulkee ovensa ensin. (helppo korjata, mutta ei välttämätön.)
+ -  Train needs: täytyy asettaa tätä varten. Tällä hetkellä vain yksi juna voi olla asetettu yhdelle radalle.
+ -  Next Spline: tarkoittaa seuraavaa PathSpline-reittiä, 
+ jota todennäköisesti käytetään palaamiseen ensimmäisen pelaajan käyttämälle reitille. (jätä useimmiten tyhjäksi)
+ -  Next Split: on raidevaihtaja, joka tulee tämän reitin jälkeen. 
+ Tämä on asetettu tyhjäksi, kun seuraava spline on käytössä. Muista, että spline-pisteen loppu koskettaa seuraavan aloituspistettä.
+
+SplitPath:
+
+ -  Switch: Tosi; kulkee "split" splineä pitkin, Epätosi; kulkee "spline" splineä pitkin.
+ -  First Path: Junan ensimmäinen käyttämä reitti. 
+ Koska juna alkaa aktiivisena, sitä ei tarvitse näyttää syntyvän, sillä se sulkee ovensa ensin. (helppo korjata, mutta ei välttämätön.)
+ -  Train: täytyy asettaa tätä varten. Tällä hetkellä vain yksi juna voi olla asetettu yhdelle radalle.
+ -  Next Spline: tarkoittaa seuraavaa PathSpline-reittiä "spline" splinelle.
+ -  Next Split: on raidevaihtaja, joka tulee tämän reitin jälkeen "spline" splinelle.
+ -  Split's Spline/Split: sama kuin edellä olevat kaksi, mutta "split" splinelle.
